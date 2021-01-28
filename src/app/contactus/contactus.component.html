@@ -1,0 +1,33 @@
+<section id="pricing" class="secondary-color text-center scrollto clearfix ">
+    <div class="row clearfix">
+        <div class="container">
+            <div class="center-form panel">
+                <div class="panel-body">
+                    <h4 class="text-center">Contact Us</h4>
+                <form [formGroup]="contactUsForm" (ngSubmit)="sendMessage(contactUsForm.value)">
+                    <div class="form-group">
+                        <input type="text" name="firstName" id="" class="form-control form-control-names input-lg" placeholder="First Name" formControlName="firstName">
+                        <input type="text" name="lastName" id="" class="form-control form-control-names input-lg" placeholder="Last Name" formControlName="lastName">
+                        <span class="ion-person form-control-icon"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="email" id="" class="form-control input-lg" placeholder="Email" formControlName="email">
+                        <span class="ion-at form-control-icon"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="message" formControlName="message">                            
+                        </textarea>
+                        <span class="ion-edit form-control-icon"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-block btn-success">Send Message</button>
+
+                    <p class="text-center">
+                        <small>Continue here <a routerLink="/Home"> Home</a></small>
+                    </p>
+                </form>
+                </div>                
+            </div>
+        </div>
+    </div>
+</section>
